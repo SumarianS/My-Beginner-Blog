@@ -1,0 +1,207 @@
+/*Statement of Authorship - I, Suzana Crepulja, Student Number 000907053, certify
+that this material is my original work. No other person's work has been used
+without acknowledgement and I have not made my work available to anyone else.*/
+
+/* Header Styles */
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* CSS Animation for Header */
+@keyframes customAnimation {
+    0% {
+        transform: scale(1);
+        color: #fff;
+        background-color: #3498db;
+    }
+    50% {
+        transform: scale(1.2);
+        color: #3498db;
+        background-color: #fff;
+    }
+    100% {
+        transform: scale(1);
+        color: #fff;
+        background-color: #3498db;
+    }
+}
+
+header:hover {
+    animation: customAnimation 20s infinite;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 5px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a:focus {
+    background-color: #fff;
+    color: #333;
+    animation: buttonAnimation 0.3s ease-in-out;
+}
+
+nav .current-page {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* CSS Animation for Navbar */
+@keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Main Styles */
+main {
+    padding: 10px;
+}
+
+/*Index page photos*/
+.image-container {
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+}
+
+/* styles for the image */
+.image-container img {
+    width: 150px; 
+    height: auto;
+    border: 2px solid blue; 
+    border-radius: 50%; 
+    transition: all 1s ease; 
+}
+
+/* On hover, change the border color to aqua and transform it into a square */
+.image-container img:hover {
+    border-color: aqua;
+    border-radius: 0;
+    /* Shake animation on hover */
+    animation: shake 10s ease-in-out; 
+}
+
+/* Shake animation for non-hovered images */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+        }
+    25% {
+        transform: translateX(-5px);
+        }
+    50% {
+        transform: translateX(5px);
+        }
+    75% {
+          transform: translateX(-5px);
+        }
+}
+
+/* Container for the images */
+.image-container-wrapper {
+    margin: 20px;
+    display: flex; 
+    justify-content: center;
+    gap: px; /* Add some spacing between the images */
+}
+
+      
+/*About Me Page 1St Image*/
+.image-container2 {
+    width: 300px; 
+    height: 200px; 
+    /* Ensure that the image doesn't overflow the container */
+    overflow: hidden; 
+} 
+.image-container2 img {
+    width: 100%; 
+    height: auto; 
+    /* Apply fade animation every 10 seconds */
+    animation: fade 10s infinite; 
+}
+      
+/* Define keyframes for the fade animation */
+@keyframes fade {
+    0%, 100% {
+        opacity: 0; /* Start and end with opacity 0 (fully transparent) */
+        }
+    50% {
+        opacity: 1; /* Middle of the animation, opacity is 1 (fully visible) */
+        }
+}
+
+/* About Me 2nd image */
+.image-container3 {
+    width: 300px; 
+    height: 200px; 
+    overflow: hidden; 
+}
+  
+.image-container3 img {
+    width: 100%; 
+    height: auto; 
+    animation: shake 2s linear infinite; 
+}
+  
+/* keyframes for the shake animation */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0); /* Start and end with no translation */
+        }
+    25% {
+        transform: translateX(-5px); /* Move to the left */
+        }
+    50% {
+        transform: translateX(5px); /* Move to the right */
+        }
+    75% {
+        transform: translateX(-5px); /* Move to the left again */
+        }
+}
+      
+
+/* Footer Styles */
+footer {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Page-specific Styles */
+.intro-section, .about-me-section {
+    margin-bottom: 20px;
+}
